@@ -1,0 +1,7 @@
+---
+- id: ansible-pre-commit
+  name: Check Ansible playbooks
+  description: Check Ansible playbooks for syntax errors.
+  langauge: script
+  entry: ansible-pre-commit
+  files: \.(sh|bash)$

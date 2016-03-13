@@ -1,0 +1,8 @@
+#!/bin/sh -e
+
+for playbook in $@
+do
+    ANSIBLE_ROLES_PATH=../ ansible-playbook \
+        --inventory=localhost, \
+        --syntax-check "$playbook"
+done
