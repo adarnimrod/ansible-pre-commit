@@ -1,5 +1,5 @@
 #!/bin/sh -e
-echo "$@"
+
 for playbook in $@
 do
     ANSIBLE_ROLES_PATH=../ ansible-playbook \
