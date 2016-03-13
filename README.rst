@@ -9,7 +9,7 @@ Usage
 
 Add the following to your :code:`.pre-commit-config.yaml`:
 
-.. :code: yaml
+.. code:: yaml
 
     - repo: https://www.shore.co.il/git/ansible-pre-commit/
       sha: v0.2.0
@@ -20,7 +20,7 @@ Add the following to your :code:`.pre-commit-config.yaml`:
 License
 -------
 
-This software is licensed under the AGPL v3+ license (see the :code:`LICENSE.txt`
+This software is licensed under the MIT license (see the :code:`LICENSE.txt`
 file).
 
 Author Information
