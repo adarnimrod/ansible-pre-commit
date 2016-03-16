@@ -4,8 +4,14 @@ Ansible pre-commit hook
 Ansible `pre-commit <http://pre-commit.com/>`_ hook. The hook runs
 :code:`ansible --syntax-check` against playbooks declared.
 
-Usage
------
+Dependencies
+------------
+
+- Ansible.
+- Pre-commit.
+
+Installation
+------------
 
 Add the following to your :code:`.pre-commit-config.yaml`:
 
@@ -16,6 +22,8 @@ Add the following to your :code:`.pre-commit-config.yaml`:
       hooks:
       - id: ansible-pre-commit
         files: playbook.yml
+
+And run :code:`pre-commit autoupdate` to update the hooks.
 
 License
 -------
