@@ -1,8 +1,6 @@
 #!/bin/sh -e
-
+export ANSIBLE_ROLES_PATH=../:./roles/:.molecule/roles/:/etc/ansible/roles/
 for playbook in $@
 do
-    ANSIBLE_ROLES_PATH=../ ansible-playbook \
-        --inventory=localhost, \
-        --syntax-check "$playbook"
+    ansible-playbook --inventory=localhost, --syntax-check "$playbook"
 done
