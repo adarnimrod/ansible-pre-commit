@@ -4,4 +4,4 @@
   description: Check Ansible playbooks for syntax errors.
   language: script
   entry: ansible-pre-commit
-  files: \.(yaml|yml)$
+  files: playbook.yml
