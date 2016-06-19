@@ -18,12 +18,21 @@ Add the following to your :code:`.pre-commit-config.yaml`:
 .. code:: yaml
 
     - repo: https://www.shore.co.il/git/ansible-pre-commit/
-      sha: v0.2.0
+      sha: v0.3.1
       hooks:
       - id: ansible-pre-commit
+        # In case you want to specify other playbook files:
         files: playbook.yml
 
-And run :code:`pre-commit autoupdate` to update the hooks.
+And run :code:`pre-commit autoupdate` to update the hooks. In case your
+:code:`roles` directory isn't in the same directory as the playbook you're
+testing or at :code:`/etc/ansible/roles` you need to declare the roles search
+path in :code:`ansible.cfg` in the root of the repo like so:
+
+.. code:
+
+    [defaults]
+    roles_path=path/to/roles/directory:path/to/another/roles/directory
 
 License
 -------
