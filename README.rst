@@ -5,6 +5,8 @@ Ansible `pre-commit <http://pre-commit.com/>`_ hooks.
 
 - ansible-syntax-check: The hook runs
   :code:`ansible --syntax-check` against playbooks declared.
+- ansible-vault-check: The hook verifies that files that have :code:`vault` in
+  the filename are indeed vaulted.
 
 Dependencies
 ------------
@@ -20,11 +22,12 @@ Add the following to your :code:`.pre-commit-config.yaml`:
 .. code:: yaml
 
     - repo: https://www.shore.co.il/git/ansible-pre-commit/
-      sha: v0.3.1
+      sha: v0.4.0
       hooks:
       - id: ansible-syntax-check
         # In case you want to specify other playbook files:
         files: playbook.yml
+      - id: ansible-vault-check
 
 And run :code:`pre-commit autoupdate` to update the hooks. In case your
 :code:`roles` directory isn't in the same directory as the playbook you're
