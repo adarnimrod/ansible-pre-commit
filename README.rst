@@ -1,8 +1,10 @@
-Ansible pre-commit hook
-#######################
+Ansible pre-commit hooks
+########################
 
-Ansible `pre-commit <http://pre-commit.com/>`_ hook. The hook runs
-:code:`ansible --syntax-check` against playbooks declared.
+Ansible `pre-commit <http://pre-commit.com/>`_ hooks.
+
+- ansible-syntax-check: The hook runs
+  :code:`ansible --syntax-check` against playbooks declared.
 
 Dependencies
 ------------
@@ -20,7 +22,7 @@ Add the following to your :code:`.pre-commit-config.yaml`:
     - repo: https://www.shore.co.il/git/ansible-pre-commit/
       sha: v0.3.1
       hooks:
-      - id: ansible-pre-commit
+      - id: ansible-syntax-check
         # In case you want to specify other playbook files:
         files: playbook.yml
 

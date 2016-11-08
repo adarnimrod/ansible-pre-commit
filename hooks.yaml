@@ -3,5 +3,5 @@
   name: Check Ansible playbooks
   description: Check Ansible playbooks for syntax errors.
   language: script
-  entry: ansible-pre-commit
+  entry: ansible-syntax-check
   files: playbook.yml
