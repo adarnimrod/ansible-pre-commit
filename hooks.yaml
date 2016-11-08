@@ -1,7 +1,13 @@
 ---
-- id: ansible-pre-commit
+- id: ansible-syntax-check
   name: Check Ansible playbooks
   description: Check Ansible playbooks for syntax errors.
   language: script
   entry: ansible-syntax-check
   files: playbook.yml
+- id: ansible-vault-check
+  name: Verify vaulted files
+  description: Verify that Ansible Vault files are vaulted.
+  language: script
+  entry: ansible-vault-check
+  files: vault
