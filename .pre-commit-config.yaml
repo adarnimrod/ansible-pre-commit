@@ -7,3 +7,8 @@
     -   id: check-yaml
     -   id: check-merge-conflict
     -   id: flake8
+-   repo: https://www.shore.co.il/git/shell-pre-commit/
+    sha: v0.1.0
+    hooks:
+    -   id: shell-lint
+        files: ansible-syntax-check
