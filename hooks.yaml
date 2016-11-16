@@ -1,6 +1,6 @@
 ---
 - id: ansible-syntax-check
-  name: Check Ansible playbooks
+  name: Syntax check Ansible playbooks
   description: Check Ansible playbooks for syntax errors.
   language: script
   entry: ansible-syntax-check
