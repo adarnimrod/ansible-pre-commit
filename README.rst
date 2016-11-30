@@ -1,6 +1,9 @@
 Ansible pre-commit hooks
 ########################
 
+.. image:: https://travis-ci.org/adarnimrod/ansible-pre-commit.svg?branch=master
+    :target: https://travis-ci.org/adarnimrod/ansible-pre-commit
+
 Ansible `pre-commit <http://pre-commit.com/>`_ hooks.
 
 - ansible-syntax-check: The hook runs

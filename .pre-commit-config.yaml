@@ -2,13 +2,20 @@
     sha: cf550fcab3f12015f8676b8278b30e1a5bc10e70
     hooks:
     -   id: check-added-large-files
-    -   id: check-json
-    -   id: check-xml
     -   id: check-yaml
     -   id: check-merge-conflict
-    -   id: flake8
 -   repo: https://www.shore.co.il/git/shell-pre-commit/
     sha: v0.1.0
     hooks:
     -   id: shell-lint
-        files: ansible-syntax-check
+        files: ansible-syntax-check|ansible-vault-check
+-   repo: local
+    hooks:
+    -   id: piprot
+        name: piprot
+        description: Check up-to-date Python requirements
+        language: system
+        entry: piprot
+        args: ['--quiet', '--outdated']
+        files: requirements.txt
+        always_run: true
