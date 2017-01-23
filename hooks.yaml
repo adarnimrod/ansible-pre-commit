@@ -2,9 +2,10 @@
 - id: ansible-syntax-check
   name: Syntax check Ansible playbooks
   description: Check Ansible playbooks for syntax errors.
-  language: script
-  entry: ansible-syntax-check
+  language: python
+  entry: ansible-playbook
   files: playbook.yml
+  args: ['--inventory=localhost,', '--syntax-check']
 - id: ansible-vault-check
   name: Verify vaulted files
   description: Verify that Ansible Vault files are vaulted.
