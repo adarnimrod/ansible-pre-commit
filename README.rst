@@ -11,11 +11,11 @@ Ansible `pre-commit <http://pre-commit.com/>`_ hooks.
 - ansible-vault-check: The hook verifies that files that have :code:`vault` in
   the filename are indeed vaulted.
 
-Dependencies
+Requirements
 ------------
 
-- Ansible.
 - Pre-commit.
+- Python 2.7 or 3.4 or later.
 
 Installation
 ------------
@@ -25,17 +25,16 @@ Add the following to your :code:`.pre-commit-config.yaml`:
 .. code:: yaml
 
     - repo: https://www.shore.co.il/git/ansible-pre-commit/
-      sha: v0.4.0
+      sha: v0.5.0
       hooks:
       - id: ansible-syntax-check
-        # In case you want to specify other playbook files:
-        files: playbook.yml
+        files: site.yml #In case you want to specify other playbook files.
       - id: ansible-vault-check
 
-And run :code:`pre-commit autoupdate` to update the hooks. In case your
-:code:`roles` directory isn't in the same directory as the playbook you're
-testing or at :code:`/etc/ansible/roles` you need to declare the roles search
-path in :code:`ansible.cfg` in the root of the repo like so:
+And in the next :code:`pre-commit` will install and run the hooks. In case
+your :code:`roles` directory isn't in the same directory as the playbook
+you're testing or at :code:`/etc/ansible/roles` you need to declare the roles
+search path in :code:`ansible.cfg` in the root of the repo like so:
 
 .. code::
 
