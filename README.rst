@@ -37,7 +37,7 @@ And run :code:`pre-commit autoupdate` to update the hooks. In case your
 testing or at :code:`/etc/ansible/roles` you need to declare the roles search
 path in :code:`ansible.cfg` in the root of the repo like so:
 
-.. code:
+.. code::
 
     [defaults]
     roles_path=path/to/roles/directory:path/to/another/roles/directory
