@@ -9,6 +9,9 @@ cache:
   - directories:
       - $HOME/.pre-commit
 
+install:
+  - pip install pre-commit
+
 script:
   - pre-commit run --all-files
 

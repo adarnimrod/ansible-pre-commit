@@ -1,6 +1,0 @@
-#!/bin/sh
-set -eu
-for playbook in $@
-do
-    ansible-playbook --inventory=localhost, --syntax-check "$playbook"
-done
