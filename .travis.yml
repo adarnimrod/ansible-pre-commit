@@ -1,6 +1,6 @@
 ---
 language: python
-python: "2.7"
+python: ["2.7", "3.3", "3.4", "3.5", "3.6"]
 dist: trusty
 sudo: false
 group: beta
@@ -10,10 +10,12 @@ cache:
       - $HOME/.pre-commit
 
 install:
-  - pip install pre-commit
+  - pip install pre-commit docutils
 
 script:
   - pre-commit run --all-files
+  - python setup.py check -mrs
+  - pip install ./
 
 notifications:
   email: false
