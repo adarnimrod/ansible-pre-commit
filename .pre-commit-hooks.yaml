@@ -4,7 +4,8 @@
   description: Check Ansible playbooks for syntax errors.
   language: python
   entry: ansible-playbook
-  files: playbook.yml
+  files: playbook\.yml
+  types: [yaml]
   args: ['--inventory=localhost,', '--syntax-check']
 - id: ansible-vault-check
   name: Verify vaulted files
