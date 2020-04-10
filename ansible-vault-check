@@ -1,7 +1,0 @@
-#!/bin/sh
-set -eu
-for filename in $@
-do
-    grep -q ANSIBLE_VAULT "$filename" || \
-        (echo "$filename is not vaulted." && exit 1)
-done

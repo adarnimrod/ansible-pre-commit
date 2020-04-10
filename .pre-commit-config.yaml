@@ -1,13 +1,24 @@
+# vim:ff=unix ts=2 sw=2 ai expandtab
+---
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v1.4.0
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.5.0
     hooks:
-    -   id: check-added-large-files
-    -   id: check-yaml
-    -   id: check-merge-conflict
-    -   id: flake8
--   repo: https://www.shore.co.il/git/shell-pre-commit/
-    rev: v0.6.0
+      - id: check-added-large-files
+      - id: check-merge-conflict
+      - id: detect-private-key
+      - id: trailing-whitespace
+  - repo: https://github.com/Lucas-C/pre-commit-hooks-markup
+    rev: v1.0.0
     hooks:
-    -   id: shell-lint
-        files: ansible-vault-check
+      - id: rst-linter
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.21.0
+    hooks:
+      - id: yamllint
+  - repo: https://github.com/amperser/proselint/
+    rev: 0.10.2
+    hooks:
+      - id: proselint
+        types: [plain-text]
+        exclude: LICENSE|requirements

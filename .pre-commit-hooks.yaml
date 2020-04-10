@@ -1,1 +1,15 @@
-hooks.yaml
+---
+- id: ansible-syntax-check
+  name: Syntax check Ansible playbooks
+  description: Check Ansible playbooks for syntax errors.
+  language: python
+  entry: ansible-playbook
+  files: playbook.yml
+  args: ['--inventory=localhost,', '--syntax-check']
+- id: ansible-vault-check
+  name: Verify vaulted files
+  description: Verify that Ansible Vault files are vaulted.
+  language: pygrep
+  files: vault
+  entry: |-
+      ANSIBLE_VAULT

@@ -14,7 +14,7 @@ Ansible `pre-commit <http://pre-commit.com/>`_ hooks.
 Requirements
 ------------
 
-- Pre-commit.
+- Pre-commit 1.2 or later.
 - Python 2.7 or 3.4 or later.
 
 Installation
@@ -25,7 +25,7 @@ Add the following to your :code:`.pre-commit-config.yaml`:
 .. code:: yaml
 
     - repo: https://www.shore.co.il/git/ansible-pre-commit/
-      sha: v0.6.0
+      sha: v0.9.0
       hooks:
       - id: ansible-syntax-check
         files: site.yml #In case you want to specify other playbook files.
