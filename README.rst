@@ -26,7 +26,7 @@ Add the following to your :code:`.pre-commit-config.yaml`:
 .. code:: yaml
 
     - repo: https://git.shore.co.il/ansible/ansible-pre-commit.git
-      sha: v0.9.0
+      sha: v0.10.0
       hooks:
       - id: ansible-syntax-check
         files: site.yml #In case you want to specify other playbook files.
