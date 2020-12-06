@@ -1,8 +1,9 @@
 Ansible pre-commit hooks
 ########################
 
-.. image:: https://travis-ci.org/adarnimrod/ansible-pre-commit.svg?branch=master
-    :target: https://travis-ci.org/adarnimrod/ansible-pre-commit
+.. image:: https://git.shore.co.il/ansible/ansible-pre-commit/badges/master/pipeline.svg
+    :target: https://git.shore.co.il/ansible/ansible-pre-commit/-/commits/master
+    :alt: CI status
 
 Ansible `pre-commit <http://pre-commit.com/>`_ hooks.
 
@@ -15,7 +16,7 @@ Requirements
 ------------
 
 - Pre-commit 1.2 or later.
-- Python 2.7 or 3.4 or later.
+- Python 2.7 or 3.6 or later.
 
 Installation
 ------------
@@ -24,7 +25,7 @@ Add the following to your :code:`.pre-commit-config.yaml`:
 
 .. code:: yaml
 
-    - repo: https://www.shore.co.il/git/ansible-pre-commit/
+    - repo: https://git.shore.co.il/ansible/ansible-pre-commit.git
       sha: v0.9.0
       hooks:
       - id: ansible-syntax-check
@@ -53,4 +54,4 @@ Author Information
 Nimrod Adar, `contact me <nimrod@shore.co.il>`_ or visit my `website
 <https://www.shore.co.il/>`_. Patches are welcome via `git send-email
 <http://git-scm.com/book/en/v2/Git-Commands-Email>`_. The repository is located
-at: https://www.shore.co.il/git/.
+at: https://git.shore.co.il/explore/.

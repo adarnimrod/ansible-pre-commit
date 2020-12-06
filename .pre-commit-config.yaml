@@ -2,18 +2,18 @@
 ---
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.5.0
+    rev: v3.3.0
     hooks:
       - id: check-added-large-files
       - id: check-merge-conflict
       - id: detect-private-key
       - id: trailing-whitespace
   - repo: https://github.com/Lucas-C/pre-commit-hooks-markup
-    rev: v1.0.0
+    rev: v1.0.1
     hooks:
       - id: rst-linter
   - repo: https://github.com/adrienverge/yamllint
-    rev: v1.21.0
+    rev: v1.25.0
     hooks:
       - id: yamllint
   - repo: https://github.com/amperser/proselint/
