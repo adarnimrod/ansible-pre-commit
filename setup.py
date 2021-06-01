@@ -7,5 +7,5 @@ setup(
     author="Nimrod Adar",
     author_email="nimrod@shore.co.il",
     version=open("VERSION", "r").read().strip(),
-    install_requires=["ansible==2.10.4"],
+    install_requires=["ansible==2.10.7"],
 )
