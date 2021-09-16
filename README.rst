@@ -1,6 +1,9 @@
 Ansible pre-commit hooks
 ########################
 
+**This project has been discontinued and has been replaced by** `pre-commit-hooks
+<https://git.shore.co.il/nimrod/pre-commit-hooks>`_
+
 .. image:: https://git.shore.co.il/ansible/ansible-pre-commit/badges/master/pipeline.svg
     :target: https://git.shore.co.il/ansible/ansible-pre-commit/-/commits/master
     :alt: CI status
